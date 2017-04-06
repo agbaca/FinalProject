@@ -29,4 +29,6 @@ plot(volesxom,type="l")
 lines(volesxom2,type="l",col="red")
 lines(volesxom3,type="l",col="blue")
 #Twitter Portion
-searchTwitter("xom",n=100,lang="en",since="2017-03-30",until="2017-04-05")
+FinalTweets<-searchTwitter("xom",n=100000,lang="en",since="2017-03-30",until="2017-04-05")
+FinalTweets.df<-twListToDF(FinalTweets) 
+write.csv(FinalTweets.df, "C:\\Users\\adamg_000\\OneDrive\\Public\\DatabaseMgmt\\FinalProject\\FinalTweets.csv") 
