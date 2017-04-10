@@ -3,7 +3,7 @@ library(RCurl)
 ##Check other PC for extra packages###
 library("tseries")
 library(twitteR)
-setup_twitter_oauth("k2VRd8b9WOwP3bCPnzOJhY5BJ","zsfQh55pU4MwjDk9pcwuHu4dFrGpzWu9Yzr7nY3jvkkniIZsUN","793230364718215168-kYebJPAsXvcoW94PE8aS4rdj43ex5zJ","zYCgHZcuOYqmggErfm4Niy6fikCHzBwqkE78Wy5BSBfV3")
+setup_twitter_oauth("Key","Key","Key")
 library("tseries")
 snpxom<-get.hist.quote('XOM',start="2017-03-30",end="2017-04-06",quote="Close")
 length(snpxom)
@@ -29,8 +29,6 @@ plot(volesxom,type="l")
 lines(volesxom2,type="l",col="red")
 lines(volesxom3,type="l",col="blue")
 #Twitter Portion
-
-
 FinalTweets<-searchTwitter("xom",n=100000,lang="en",since="2017-03-31",until="2017-04-06")
 FinalTweets.df<-twListToDF(FinalTweets) 
 write.csv(FinalTweets.df, file="~/OneDrive/Public/DatabaseMgmt/FinalProject/FinalTweets")
